@@ -45,3 +45,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     frameworks-base-overlays-debug
+
+# Peel (preinstalled app), provided by the optional vendor/peel repo. Skipped if the repo is not in the tree.
+$(call inherit-product-if-exists, vendor/peel/peel.mk)
